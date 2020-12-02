@@ -854,7 +854,37 @@ SRR794294.5	147	NC_000012.12	10204	0	8S93M	=	10002	-295	ACCCTCTTCCTAACCCTAGCCCTA
 47715 + 0 singletons (0.77% : N/A)
 86674 + 0 with mate mapped to a different chr
 55497 + 0 with mate mapped to a different chr (mapQ>=5)
-
-
-
-
+(bioinfo) [praharshit@hp grch38]$ samtools view -S -b gr1ch38.sam > gr1ch38.aln.bam
+(bioinfo) [praharshit@hp grch38]$ samtools sort -o gr1ch38.aln.sort.bam gr1ch38.aln.bam 
+[bam_sort_core] merging from 2 files and 1 in-memory blocks...
+(bioinfo) [praharshit@hp grch38]$ samtools index gr1ch38.aln.sort.bam 
+(bioinfo) [praharshit@hp grch38]$ ls gr1ch38.*
+gr1ch38.aln.bam  gr1ch38.aln.sort.bam  gr1ch38.aln.sort.bam.bai  gr1ch38.sam
+(bioinfo) [praharshit@hp grch38]$ samtools flagstat gr1ch38.aln.bam 
+6179411 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+14023 + 0 supplementary
+0 + 0 duplicates
+6079398 + 0 mapped (98.38% : N/A)
+6165388 + 0 paired in sequencing
+3082694 + 0 read1
+3082694 + 0 read2
+5914774 + 0 properly paired (95.94% : N/A)
+6017660 + 0 with itself and mate mapped
+47715 + 0 singletons (0.77% : N/A)
+86674 + 0 with mate mapped to a different chr
+55497 + 0 with mate mapped to a different chr (mapQ>=5)
+(bioinfo) [praharshit@hp grch38]$ samtools flagstat gr1ch38.aln.sort.bam
+6179411 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+14023 + 0 supplementary
+0 + 0 duplicates
+6079398 + 0 mapped (98.38% : N/A)
+6165388 + 0 paired in sequencing
+3082694 + 0 read1
+3082694 + 0 read2
+5914774 + 0 properly paired (95.94% : N/A)
+6017660 + 0 with itself and mate mapped
+47715 + 0 singletons (0.77% : N/A)
+86674 + 0 with mate mapped to a different chr
+55497 + 0 with mate mapped to a different chr (mapQ>=5)
