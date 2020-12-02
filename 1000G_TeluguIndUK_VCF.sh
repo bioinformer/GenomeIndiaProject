@@ -888,3 +888,23 @@ gr1ch38.aln.bam  gr1ch38.aln.sort.bam  gr1ch38.aln.sort.bam.bai  gr1ch38.sam
 47715 + 0 singletons (0.77% : N/A)
 86674 + 0 with mate mapped to a different chr
 55497 + 0 with mate mapped to a different chr (mapQ>=5)
+
+(bioinfo) [praharshit@hp grch38]$ ls grch38.*
+grch38.fa  grch38.fa.amb  grch38.fa.ann  grch38.fa.bwt  grch38.fa.pac  grch38.fa.sa
+(bioinfo) [praharshit@hp grch38]$ samtools faidx grch38.fa
+(bioinfo) [praharshit@hp grch38]$ ls grch38.*
+grch38.fa  grch38.fa.amb  grch38.fa.ann  grch38.fa.bwt  grch38.fa.fai  grch38.fa.pac  grch38.fa.sa
+(bioinfo) [praharshit@hp grch38]$ samtools mpileup -f grch38.fa gr1ch38.aln.sort.bam | head
+[mpileup] 1 samples in 1 input files
+NC_000001.11	10002	a	1	^!.	@
+NC_000001.11	10003	a	1	.	@
+NC_000001.11	10004	c	1	.	<
+NC_000001.11	10005	c	3	.^!.^!.	?<>
+NC_000001.11	10006	c	3	...	?>>
+NC_000001.11	10007	t	4	...^:.	B;C@
+NC_000001.11	10008	a	4	....	;DF@
+NC_000001.11	10009	a	4	....	DBF@
+NC_000001.11	10010	c	4	....	A?FA
+NC_000001.11	10011	c	4	....	A:FD
+
+
