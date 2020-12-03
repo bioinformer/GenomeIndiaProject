@@ -1038,4 +1038,31 @@ INFO	2020-12-02 21:39:17	CreateSequenceDictionary
 [Wed Dec 02 21:39:46 IST 2020] picard.sam.CreateSequenceDictionary done. Elapsed time: 0.45 minutes.
 Runtime.totalMemory()=536870912
 
+(base) [praharshit@hp ~]$ source activate bioinfo
+(bioinfo) [praharshit@hp ~]$ cd grch38
+(bioinfo) [praharshit@hp grch38]$ ls grch38.fa*
+grch38.fa  grch38.fa.1.bt2  grch38.fa.2.bt2  grch38.fa.3.bt2  grch38.fa.4.bt2  grch38.fa.amb  grch38.fa.ann  grch38.fa.bwt  grch38.fa.fai  grch38.fa.pac  grch38.fa.sa
+(bioinfo) [praharshit@hp grch38]$ md5sum *.bt2
+a221997da856276ff92c5527fd3de051  grch38.fa.1.bt2
+4352d88a78aa39750bf70cd6f27bcaa5  grch38.fa.2.bt2
+ad759b6068c6106b4cb4e7801ec6bd27  grch38.fa.3.bt2
+42f1f2741e0c7dcd000e844b12d661f3  grch38.fa.4.bt2
+(bioinfo) [praharshit@hp grch38]$ md5sum -c *.bt2
+md5sum: grch38.fa.1.bt2: no properly formatted MD5 checksum lines found
+md5sum: grch38.fa.2.bt2: no properly formatted MD5 checksum lines found
+md5sum: grch38.fa.3.bt2: no properly formatted MD5 checksum lines found
+md5sum: grch38.fa.4.bt2: no properly formatted MD5 checksum lines found
+(bioinfo) [praharshit@hp grch38]$ md5sum grch38.fa.1.bt2 > fw1.md5
+(bioinfo) [praharshit@hp grch38]$ md5sum grch38.fa.2.bt2 > fw2.md5
+(bioinfo) [praharshit@hp grch38]$ md5sum grch38.fa.3.bt2 > fw3.md5
+(bioinfo) [praharshit@hp grch38]$ md5sum grch38.fa.4.bt2 > fw4.md5
+(bioinfo) [praharshit@hp grch38]$ md5sum -c fw1.md5
+grch38.fa.1.bt2: OK
+(bioinfo) [praharshit@hp grch38]$ md5sum -c fw2.md5
+grch38.fa.2.bt2: OK
+(bioinfo) [praharshit@hp grch38]$ md5sum -c fw3.md5
+grch38.fa.3.bt2: OK
+(bioinfo) [praharshit@hp grch38]$ md5sum -c fw4.md5
+grch38.fa.4.bt2: OK
+
 
